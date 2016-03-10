@@ -8,4 +8,13 @@ public class SoundTest {
 		printSound( new Sparrow() );
 		printSound( new Duck() );
 	}
+	
+	static void printSound(Object obj)
+	{
+		if( obj instanceof Soundable )
+		{
+			Soundable sd = (Soundable)obj;
+			System.out.println(sd.sound());
+		}
+	}
 }
